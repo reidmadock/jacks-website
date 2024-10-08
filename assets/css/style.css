@@ -1,0 +1,84 @@
+:root {
+    --primary-midnight: #1d1936;
+
+    --background-cream: #fbf6ef;
+    --background-grey: #F1F1F1;
+    
+    --accent-ashgray: #CFD7C7;
+    --accent-black: #0b132b;
+    --accent-dark-cream: #ccc;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0rem;
+    background-color: var(--background-cream);
+    color: var(--primary-midnight);
+}
+
+nav {
+    width: 50%;
+}
+
+li {
+    list-style: none;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.text-clr-1 {
+    color: var(--primary-midnight);
+}
+
+.center {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+/* Class settings */
+.not-active {
+  visibility: hidden;
+}
+
+.active {
+  visibility: visible;
+}
