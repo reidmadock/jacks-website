@@ -74,11 +74,17 @@ li {
     transform: translate(-50%, -50%);
 }
 
+.container {
+
+}
+
 /* Class settings */
 .not-active {
-  visibility: hidden;
+  /* visibility: hidden; */
+  display: none;
 }
 
 .active {
-  visibility: visible;
+  /* visibility: visible; */
+  display: block;
 }
