@@ -158,6 +158,11 @@ p {
   font-size: large;
 }
 
+td {
+  vertical-align: top;
+  font-size: large;
+}
+
 @media (width <= 1240px) {
   .row {
     width: 90%;
