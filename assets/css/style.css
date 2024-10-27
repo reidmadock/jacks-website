@@ -168,6 +168,7 @@ table {
 td {
   vertical-align: top;
   font-size: large;
+  width: 36%;
 }
 
 td:first-child, td:last-child {
