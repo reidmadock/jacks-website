@@ -21,7 +21,6 @@
     <p>test</p>
     <h2>Tabs</h2> -->
     <!-- <p>Click on the buttons inside the tabbed menu:</p> -->
-
     <div class="tab">
     <!-- <button class="text-clr-1 active">Jack Madock</button> -->
     <button class="tablinks text-clr-1 active" onclick="openCity(event, 'Jack Madock')">Jack Madock</button>
@@ -33,54 +32,47 @@
       <div class="container">
         <div class="row">
           <!-- begin table -->
-          <table>
+          <table id="table" border="1px solid black">
             <tbody>
               <!-- row 1, just the title  -->
-              <!-- <tr style="width: ;">
-                <td style="width: 33%; height: 33%;">
-                  <h3>About Jack</h3>
-                </td>
-              </tr> -->
               <tr style="height: 42px;">
-                <td style="width: 10%; height: 42px;">
-                  <!-- <h3><strong>About Jack</strong></h3> -->
-                </td>
-                <td style="width: 40%; height: 42px;">
+                <td style="width: 10%; height: 42px;"></td>
+                <td style="width: 40%; height: 42px;" colspan="2">
                   <h3 style="font-size: larger;"><strong>About Jack</strong></h3>
                 </td>
                 <td style="width: 40%; height: 42px;"></td>
-                <td style="width: 10%; height: 42px;"></td>
+                <!-- <td style="width: 10%; height: 42px;"></td> -->
+              </tr>
+              <!-- Row 1, just the title using table headers -->
+              <tr>
+                <th></th>
+                <th colspan="2">
+                  <h3 style="font-size: larger;"><strong>About Jack</strong></h3>
+                </th>
+                <th></th>
               </tr>
               <!-- row 2, all the content  -->
               <tr style="height: 42px;">
                 <td style="width: 10.0%; height: 42px;"></td>
                 <td style="width: 40%; height: 42px;">
-                  <!-- <p> -->
-                    I am a PhD candidate in philosophy at the University of Florida. <br/></br/>
-                    I work primarily in applied ethics and also have significant interests in epistemology and political philosophy.
-                    <br/><br/>Before coming to UF, I completed an MA in philosophy at KU Leuven and a BA at DePaul University.
-                  <!-- </p> -->
+                  I am a PhD candidate in philosophy at the University of Florida. <br/></br/>
+                  I work primarily in applied ethics and also have significant interests in epistemology and political philosophy.<br/><br/>
+                  Before coming to UF, I completed an MA in philosophy at KU Leuven and a BA at DePaul University.
                 </td>
                 <td style="width: 40%; height: 42px;">
-                  <img class="" src="./assets/photos/pensive.jpg" alt="photo of the philosophy legend himself" style="width: 100%;">
-                  <p>jackmadock@gmail.com</p>
+                  <!-- <img class="" src="./assets/photos/pensive.jpg" alt="photo of the philosophy legend himself" style="width: 100%;"> -->
+                  <img class="" src="./assets/photos/pensive.jpg" alt="photo of the philosophy legend himself">
+                  <a href="jackmadock@gmail.com">jackmadock@gmail.com</a>
                 </td>
-                <td style="width: 10%; height: 42px;"></td> 
+                <td style="width: 10%; height: 42px;"></td>
               </tr>
-              <!-- hold this for a sec -->
-              <!-- <tr style="height: 200px;">
-                <td>
-                  <p>
-                    I am a PhD candidate in philosophy at the University of Florida. <br/></br/>
-                    I work primarily in applied ethics and also have significant interests in epistemology and political philosophy.
-                    <br/><br/>Before coming to UF, I completed an MA in philosophy at KU Leuven and a BA at DePaul University.
-                  </p>
-                </td>
-                <td style="height: 200px;">
-                  <img class="" src="./assets/photos/pensive.jpg" alt="photo of the philosophy legend himself" style="width: 100%;">
-                  <p>jackmadock@gmail.com</p>
-                </td>
-              </tr> -->
+              <!-- Row 3, Empty row for style purposes -->
+              <tr style="height: 42px;">
+                <td style="width: 10%; height: 42px;"></td>
+                <td style="width: 40%; height: 42px;"></td>
+                <td style="width: 40%; height: 42px;"></td>
+                <td style="width: 10%; height: 42px;"></td>
+              </tr>
             </tbody>
           </table>
           <!-- end table  -->

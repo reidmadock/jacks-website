@@ -150,18 +150,33 @@ li {
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
   border-radius: 5px 5px 0 0;
-  /* height: 450px; */
-  /* aspect-ratio: 1; */
+  width: 100%;
 }
 
 p {
   font-size: large;
 }
 
+/* Table stylings */
+
+table {
+  /* remove before final product  */
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+}
+
 td {
   vertical-align: top;
   font-size: large;
 }
+
+td:first-child, td:last-child {
+  width: 14%;
+}
+
+/* td:nth-child(odd), th:nth-child(even) {
+  background-color: var(--accent-ashgray);
+} */
 
 @media (width <= 1240px) {
   .row {
