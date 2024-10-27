@@ -175,6 +175,11 @@ td:first-child, td:last-child {
   width: 14%;
 }
 
+td img {
+  max-height: 600px;
+  width: auto;
+}
+
 /* td:nth-child(odd), th:nth-child(even) {
   background-color: var(--accent-ashgray);
 } */
