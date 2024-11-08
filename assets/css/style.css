@@ -30,6 +30,7 @@ body {
     /* background-color: var(--background-cream); */
     color: var(--primary-midnight);
     font-family: 'Wittgenstein', serif;
+    font-size: 1.25rem;
 }
 
 nav {
@@ -42,11 +43,11 @@ h4 {
 
 li {
     /* list-style: lower-greek; */
-    font-size: large;
+    /* font-size: large; */
     /* list-style-type: "- "; */
-    /* list-style: "-" inside; */
-    list-style: lower-greek inside;
-    margin-top: 1rem;
+    list-style: "-" inside;
+    /* list-style: lower-greek inside; */
+    margin-top: .5rem;
 }
 
 /* Style the tab */
@@ -167,7 +168,7 @@ table {
 
 td {
   vertical-align: top;
-  font-size: large;
+  /* font-size: large; */
   width: 36%;
 }
 
