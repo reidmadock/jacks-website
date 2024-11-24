@@ -121,7 +121,7 @@ li {
 /* content containers */
 .row {
   /* display: flex; */
-  width: 60%;
+  width: 75%;
   justify-content: space-evenly;
 }
 
