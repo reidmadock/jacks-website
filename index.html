@@ -12,71 +12,58 @@
   </head>
   <body class="font-serif">
     <div class="tab">
-    <button class="tablinks text-clr-1 active" onclick="openCity(event, 'Jack Madock')">Jack Madock</button>
-    <button class="tablinks text-clr-1" onclick="openCity(event, 'Research')">Research</button>
-    <button class="tablinks text-clr-1" onclick="openCity(event, 'Teaching')">Teaching</button>
+    <button tabindex="0" class="tablinks text-clr-1 active" onclick="openPage(event, 'Jack Madock')">Jack Madock</button>
+    <button tabindex="0" class="tablinks text-clr-1" onclick="openPage(event, 'Research')">Research</button>
+    <button tabindex="0" class="tablinks text-clr-1" onclick="openPage(event, 'Teaching')">Teaching</button>
     </div>
 
     <div id="Jack Madock" class="tabcontent active">
-      <div class="container">
-        <div class="row">
+      <div class="content">
+        <div class="grid-container">
           <!-- Dash -->
-          <hr class="solid" style="width: 78%; margin-bottom: .8rem; margin-top: .8rem;">
-          <!-- begin table -->
-          <table id="table" >
-            <tbody>
-              <tr>
-                <th></th>
-                <th colspan="2">
-                  <!-- <h3 style="font-size: larger;"><strong>Jack Madock</strong></h3> -->
-                  <!-- <hr class="solid"> -->
-                </th>
-                <th></th>
-              </tr>
-              <!-- row 2, all the content  -->
-              <tr style="height: 42px;">
-                <td></td>
-                <!-- <td style="width: 10.0%; height: 42px;"></td> -->
-                <td>
-                <!-- <td style="width: 40%; height: 42px;"> -->
-                  I am a PhD candidate in philosophy at the University of Florida. <br/></br/>
-                  I work primarily in applied ethics, especially ethics of technology. 
-                  I also have significant interests in epistemology and political philosophy.<br/><br/>
-                  Before coming to UF, I completed an MA at KU Leuven and a BA at DePaul University.
-                  Under the research tab you will find links to my pubilshed papers.
-                  Under the teaching tab you will find courses I have taught and sample syllabi.
-                </td>
-                <td style="text-align: center;">
-                <!-- <td style="width: 40%; height: 42px;"> -->
-                  <!-- <img class="" src="./assets/photos/pensive.jpg" alt="photo of the philosophy legend himself" style="width: 100%;"> -->
-                  <img class="" src="./assets/photos/110424_John Madock_exterior_EDITED_31(2).jpg" alt="photo of the philosophy legend himself">
-                  <a href="jackmadock@gmail.com">jackmadock@gmail.com</a>
-                </td>
-                <td></td>
-                <!-- <td style="width: 10%; height: 42px;"></td> -->
-              </tr>
-              <!-- Row 3, Empty row for style purposes -->
-              <tr style="height: 42px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <!-- <td style="width: 10%; height: 42px;"></td>
-                <td style="width: 40%; height: 42px;"></td>
-                <td style="width: 40%; height: 42px;"></td>
-                <td style="width: 10%; height: 42px;"></td> -->
-              </tr>
-            </tbody>
-          </table>
-          <!-- end table  -->
+          <div class="grid-header">
+            <!-- <h2>φ</h2> -->
+            <!-- <svg width="400" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <path d="m178.41 115.87v6.6704q-40.948 10.561-40.948 77.449 0 72.447 50.954 85.231v-107.65q0-23.531 2.9651-34.278 2.9652-10.932 12.97-19.084 10.191-8.3378 24.458-8.3378 25.014 0 46.321 23.531 21.493 23.531 21.493 61.329 0 35.389-22.048 63.182-21.864 27.793-66.147 31.684v76.152h-20.011v-76.152q-38.539-3.3351-61.885-28.719-23.161-25.569-23.161-66.332 0-36.686 21.123-59.847 21.123-23.346 53.918-24.828zm30.016 169.35q58.365-8.7083 58.365-75.411 0-30.757-12.599-51.509-12.414-20.937-29.275-20.937-6.1141 0-10.376 4.4467-4.0749 4.2616-5.1905 10.191-0.92746 5.9292-0.92746 23.346z"/>
+            </svg> -->
+            <!-- φ -->
+            <hr class="solid" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
+          </div>
+    
+          <div class="grid-left" id="home-page-left">
+            <div>
+            I am a PhD candidate in philosophy at the University of Florida. <br/></br/>
+            I work primarily in applied ethics, especially ethics of technology. 
+            I also have significant interests in epistemology and political philosophy.<br/><br/>
+            Before coming to UF, I completed an MA at KU Leuven and a BA at DePaul University.
+            Under the research tab you will find links to my pubilshed papers.
+            Under the teaching tab you will find courses I have taught and sample syllabi.
+            </div>
+          </div>
+
+          <div class="grid-right" id="home-page-right">
+            <div class="card">
+              <img class="" src="./assets/photos/110424_John Madock_exterior_EDITED_31(2).jpg" alt="Portrait of Jack Madock, philosophy legend himself">
+              <a href="jackmadock@gmail.com">jackmadock@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="grid-footer">
+            <!-- Filler -->
+          </div>
+          <!-- End grid container -->
         </div>
       </div>
     </div>
 
     <div id="Research" class="tabcontent">
-      <p>
-        These are links to my published papers.
-      </p>
+    <div class="content">
+      <div class="container">
+        <div>
+          <hr class="solid" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
+        </div>
+        <!-- Begin Publications -->
+        <p>These are links to my published papers.</p>
         <h3>Publications:</h3>
         <ul>
           <li>
@@ -96,16 +83,18 @@
             <a href="https://doi.org/10.23827/BDL_2021_15">https://doi.org/10.23827/BDL_2021_15.Research</a>
           </li>
         </ul>
-            </li>
-          </ul>
-          <!-- End of the blocks -->
-        </ul>
-        <!-- End of the sections -->
-      <!-- </table> -->
+        <!-- End publications -->
+      </div>
+
+    </div>
     </div>
     <div id="Teaching" class="tabcontent">
-      <div class="container">
-        <div class="row">
+      <div class="content">
+        <div class="container">
+          <div>
+            <hr class="solid" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
+          </div>
+          <!-- Begin Teaching section -->
           <h3 class="text-clr-1">Teaching</h3>
           <p>
             This is a list of courses I have previously taught as well as sample syllabi from those courses. 
@@ -113,7 +102,6 @@
             For student evaluations please e-mail me.
           </p>
           <h4>Syllabi:</h4>
-          <!-- <p>Peppers is the name; teaching is my game.</p> -->
           <ul>
             <li>
               <a href="content/PHI2100 Syllabus.docx">PHI2100 Syllabus</a>
@@ -136,6 +124,7 @@
           </ul>
         </div>
       </div>
+      <!-- End Teaching section -->
     </div>
 </body>
 <script src="assets/js/script.js"></script> 
