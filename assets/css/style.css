@@ -12,6 +12,9 @@
     --background-midnight:  #26236B;
     --background-midnight2: #1C1D54;
     --background-midnight3: #151345;
+
+    --contrast-one: #3f38bd;
+    --contrast-two: #241cbd;
 }
 
 .wittgenstein-peppers {
@@ -33,10 +36,10 @@ body {
     font-size: 1.15rem;
 }
 
-svg {
+/* svg {
   width: 20%;
   height: 20%;
-}
+} */
 
 nav {
     width: 50%;
@@ -48,12 +51,12 @@ h4 {
 
  /* unvisited link */
 a:link {
-  color: var(--background-midnight);
+  color: var(--contrast-one);
 }
 
 /* visited link */
 a:visited {
-  color: var(--primary-midnight);
+  color: var(--contrast-two);
 }
 
 /* mouse over link */
