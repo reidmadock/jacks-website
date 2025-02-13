@@ -226,6 +226,27 @@ hr.rounded {
   justify-content: center;
 }
 
+@media only screen and (max-width: 1920px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    width: 68%;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5px;
+  }
+  
+  .grid-container {
+    width: 68%;
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+      "grid-header grid-header"
+      "grid-left grid-right"
+      "grid-footer grid-footer";
+    /* grid-template-columns: 1.25fr 1fr; */
+    gap: 5px;
+  }
+}
+
 @media (width <= 1240px) {
   .tab button {
     /* display: flex; */
