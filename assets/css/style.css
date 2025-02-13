@@ -30,7 +30,7 @@ body {
     /* background-color: var(--background-cream); */
     color: var(--primary-midnight);
     font-family: 'Wittgenstein', serif;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 nav {
@@ -121,7 +121,7 @@ li {
 /* content containers */
 .row {
   /* display: flex; */
-  width: 60%;
+  width: 75%;
   justify-content: space-evenly;
 }
 
@@ -169,16 +169,22 @@ table {
 td {
   vertical-align: top;
   /* font-size: large; */
-  width: 36%;
+  width: 38%;
 }
 
 td:first-child, td:last-child {
-  width: 14%;
+  width: 12%;
 }
 
 td img {
-  max-height: 600px;
+  max-height: 420px;
   width: auto;
+}
+
+hr.rounded {
+  margin-bottom: .2rem;
+  border-top: 2px solid #cfcece;
+  border-radius: 1px;
 }
 
 /* td:nth-child(odd), th:nth-child(even) {
