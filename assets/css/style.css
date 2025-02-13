@@ -100,8 +100,6 @@ li {
 }
 
 .container {
-  /* display: flex; */
-  /* padding: 2px 16px; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -120,7 +118,6 @@ li {
 
 /* content containers */
 .row {
-  /* display: flex; */
   width: 75%;
   justify-content: space-evenly;
 }
@@ -139,12 +136,13 @@ li {
 }
 
 .card {
-  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 12px;
-  /* border-radius: 5px;  */
+  display: grid;
+  padding: 12px;
+  background-color: #0b132b;
+  border-radius: 5px;
+  width: min-content;
   /* 5px rounded corners */
 }
 
@@ -166,9 +164,16 @@ table {
   border-collapse: collapse;
 }
 
+tbody {
+  /* width: 80%; */
+  /* display: table-cell; */
+  /* display: inline-block; */
+  /* display: table-row; */
+  /* display: block; */
+}
+
 td {
   vertical-align: top;
-  /* font-size: large; */
   width: 38%;
 }
 
@@ -187,6 +192,29 @@ hr.rounded {
   border-radius: 1px;
 }
 
+tr {
+  /* background-color: #26236B; */
+}
+
+#home-page-right {
+  vertical-align: center;
+}
+
+#home-page-right .card {
+  /* max-width: 420px; */
+}
+
+#home-page-left div {
+  /* max-width: 420px; */
+}
+
+@media (width >= 1240) {
+  tr {
+    background-color: var(--background-cream-dark);
+    width: 90%;
+  }
+}
+
 /* td:nth-child(odd), th:nth-child(even) {
   background-color: var(--accent-ashgray);
 } */
@@ -195,5 +223,36 @@ hr.rounded {
   .row {
     width: 90%;
     flex-direction: column;
+    /* background-color: var(--accent-black); */
   }
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  tr th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    margin: 0 0 1rem 0;
+  }
+  tr .blank {
+    visibility: hidden;
+  }
+  td {
+    /* vertical-align: middle; */
+    /* font-size: large; */
+    /* width: 38%; */
+    width: 100%;
+  }
+
+td:first-child, td:last-child {
+  /* width: 12%; */
+}
 }
