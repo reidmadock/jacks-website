@@ -226,6 +226,25 @@ hr.rounded {
   justify-content: center;
 }
 
+#research .content {
+  /* background-image: -; */
+  /* background-color: var(--background-midnight); */
+  border-radius: 5px 5px 5px 5px;
+}
+
+#research .container {
+  z-index: 1;
+  background-color: var(--background-cream-dark);
+  border-radius: 0 0 .5rem .5rem;
+}
+
+/* Can also use #reasearch-image to edit, but having them all be children of research seems cleaner */
+#research img {
+  position: absolute;
+  z-index: 0;
+  border-radius: .5rem .5rem .5rem .5rem;
+}
+
 @media only screen and (max-width: 1920px), (min-device-width: 768px) and (max-device-width: 1024px) {
   .container {
     width: 68%;
