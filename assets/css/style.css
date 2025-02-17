@@ -73,7 +73,8 @@ li {
     /* list-style: lower-greek; */
     /* font-size: large; */
     /* list-style-type: "- "; */
-    list-style: "-" inside;
+    list-style: "- " inside;
+    /* list-style: "φ " inside; */
     /* list-style: lower-greek inside; */
     margin-top: .5rem;
 }
@@ -162,8 +163,13 @@ li {
   gap: 5px;
 }
 
+.grid-container div, p, h2, ul, h4 {
+  padding: .4rem;
+  margin: 0;
+}
+
 .grid-container > div {
-  padding: 1rem;
+  /* padding: .4rem; */
 }
 .grid-container > div.grid-header {
   grid-area: grid-header;
@@ -220,12 +226,49 @@ hr.rounded {
   border-radius: 1px;
 }
 
+/* Placement is determind by class, so to keep grid resuble substyle is done by ID */
 #home-page-right {
   /* vertical-align: center; */
   display: grid;
   justify-content: center;
 }
 
+#research .content {
+  /* background-image: -; */
+  /* background-color: var(--background-midnight); */
+  border-radius: 5px 5px 5px 5px;
+}
+
+#research .container {
+  z-index: 1;
+  background-color: var(--background-cream-dark);
+  border-radius: 0 0 .5rem .5rem;
+}
+
+/* Can also use #reasearch-image to edit, but having them all be children of research seems cleaner */
+#research img {
+  position: absolute;
+  max-height: 94%;
+  z-index: 0;
+  border-radius: .5rem .5rem .5rem .5rem;
+}
+
+#teaching .grid-container {
+  grid-template-columns: 1.25fr 1fr;
+}
+
+#teaching .card {
+  border-radius: 5px;
+}
+
+#teaching .card img {
+    /* box-shadow: 6px 12px 2px 1px rgba(0,0,0,0.2); */
+    border-radius: 0 0 0 0;
+    box-shadow: 6px 12px 2px 1px var(--background-midnight3);
+    /* transition: 0.3s; */
+}
+
+/* Media queries */
 @media only screen and (max-width: 1920px), (min-device-width: 768px) and (max-device-width: 1024px) {
   .container {
     width: 68%;

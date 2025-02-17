@@ -13,11 +13,12 @@
   <body class="font-serif">
     <div class="tab">
     <button tabindex="0" class="tablinks text-clr-1 active" onclick="openPage(event, 'Jack Madock')">Jack Madock</button>
-    <button tabindex="0" class="tablinks text-clr-1" onclick="openPage(event, 'Research')">Research</button>
-    <button tabindex="0" class="tablinks text-clr-1" onclick="openPage(event, 'Teaching')">Teaching</button>
+    <button tabindex="0" class="tablinks text-clr-1" onclick="openPage(event, 'research')">Research</button>
+    <button tabindex="0" class="tablinks text-clr-1" onclick="openPage(event, 'teaching')">Teaching</button>
     </div>
 
-    <div id="Jack Madock" class="tabcontent active">
+    <!-- TODO: consolidate the seperate container logics into a parent logic with sub categories. -->
+    <div id="Jack Madock" class="tabcontent">
       <div class="content">
         <div class="grid-container">
           <!-- Dash -->
@@ -27,7 +28,7 @@
               <path d="m178.41 115.87v6.6704q-40.948 10.561-40.948 77.449 0 72.447 50.954 85.231v-107.65q0-23.531 2.9651-34.278 2.9652-10.932 12.97-19.084 10.191-8.3378 24.458-8.3378 25.014 0 46.321 23.531 21.493 23.531 21.493 61.329 0 35.389-22.048 63.182-21.864 27.793-66.147 31.684v76.152h-20.011v-76.152q-38.539-3.3351-61.885-28.719-23.161-25.569-23.161-66.332 0-36.686 21.123-59.847 21.123-23.346 53.918-24.828zm30.016 169.35q58.365-8.7083 58.365-75.411 0-30.757-12.599-51.509-12.414-20.937-29.275-20.937-6.1141 0-10.376 4.4467-4.0749 4.2616-5.1905 10.191-0.92746 5.9292-0.92746 23.346z"/>
             </svg> -->
             <!-- φ -->
-            <hr class="solid" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
+            <hr class="solid line horizontal" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
           </div>
     
           <div class="grid-left" id="home-page-left">
@@ -41,6 +42,7 @@
             </div>
           </div>
 
+          <!-- Placement is determind by class, so to keep grid resuble substyle is done by ID -->
           <div class="grid-right" id="home-page-right">
             <div class="card">
               <img class="" src="./assets/photos/110424_John Madock_exterior_EDITED_31(2).jpg" alt="Portrait of Jack Madock, philosophy legend himself">
@@ -49,6 +51,7 @@
           </div>
           
           <div class="grid-footer">
+            <hr class="solid line horizontal" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
             <!-- Filler -->
           </div>
           <!-- End grid container -->
@@ -56,72 +59,128 @@
       </div>
     </div>
 
-    <div id="Research" class="tabcontent">
-    <div class="content">
-      <div class="container">
-        <div>
-          <hr class="solid" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
-        </div>
-        <!-- Begin Publications -->
-        <p>These are links to my published papers.</p>
-        <h3>Publications:</h3>
-        <ul>
-          <li>
-            Madock, Jack. 2024. “From There to Here: A Liberal-Multicultural Framework of the 
-            Rights of Climate Refugees.” In Multicultural Citizenship: Legacy and Critique. Eds. Francois Boucher 
-            and Jean-Francois Caron. Routledge, NY. 
-            <a href="https://www.routledge.com/Multicultural-Citizenship-Legacy-and-Critique/Caron-Boucher/p/book/9781032564982?srsltid=AfmBOooUXIxAv-kWMSIYCSYEmXwjA9OAFdOT6pRyO-QQ79R-vzxkwpif">link</a>
-          </li>
-          <li>
-            Madock, Jack. 2024. “Robot Warfare: The (Im)Permissibility of Autonomous Weapons Systems.” 
-            AI and Ethics, September.
-            <a href="https://doi.org/10.1007/s43681-024-00567-7">https://doi.org/10.1007/s43681-024-00567-7.</a> 
-          </li>
-          <li>
-            Madock, Jack. 2021. “The Irreplaceability of Place: What We Lose When We Lose Our Homeland.” 
-            Biblioteca Della Libertà 56 (232): 83–98.
-            <a href="https://doi.org/10.23827/BDL_2021_15">https://doi.org/10.23827/BDL_2021_15.Research</a>
-          </li>
-        </ul>
-        <!-- End publications -->
-      </div>
-
-    </div>
-    </div>
-    <div id="Teaching" class="tabcontent">
+    <div id="research" class="tabcontent">
       <div class="content">
         <div class="container">
-          <div>
-            <hr class="solid" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
+          <div class="">
+            <hr class="solid line horizontal" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
           </div>
-          <!-- Begin Teaching section -->
-          <h3 class="text-clr-1">Teaching</h3>
-          <p>
-            This is a list of courses I have previously taught as well as sample syllabi from those courses. 
-            The list includes courses for which I served as teaching assistant as well as primary instructor. 
-            For student evaluations please e-mail me.
-          </p>
-          <h4>Syllabi:</h4>
+          <!-- Begin Publications -->
+          <p>These are links to my published papers.</p>
+          <h3>Publications:</h3>
           <ul>
             <li>
-              <a href="content/PHI2100 Syllabus.docx">PHI2100 Syllabus</a>
+              Madock, Jack. 2024. “From There to Here: A Liberal-Multicultural Framework of the 
+              Rights of Climate Refugees.” In Multicultural Citizenship: Legacy and Critique. Eds. Francois Boucher 
+              and Jean-Francois Caron. Routledge, NY. 
+              <a href="https://www.routledge.com/Multicultural-Citizenship-Legacy-and-Critique/Caron-Boucher/p/book/9781032564982?srsltid=AfmBOooUXIxAv-kWMSIYCSYEmXwjA9OAFdOT6pRyO-QQ79R-vzxkwpif">link</a>
+            </li>
+            <li>
+              Madock, Jack. 2024. “Robot Warfare: The (Im)Permissibility of Autonomous Weapons Systems.” 
+              AI and Ethics, September.
+              <a href="https://doi.org/10.1007/s43681-024-00567-7">https://doi.org/10.1007/s43681-024-00567-7.</a> 
+            </li>
+            <li>
+              Madock, Jack. 2021. “The Irreplaceability of Place: What We Lose When We Lose Our Homeland.” 
+              Biblioteca Della Libertà 56 (232): 83–98.
+              <a href="https://doi.org/10.23827/BDL_2021_15">https://doi.org/10.23827/BDL_2021_15.Research</a>
             </li>
           </ul>
-          <h4>Courses:</h4>
-          <ul>
-            <li style="list-style: none;">
-              <strong>University of Florida:</strong>
-            </li>
+          <!-- End publications -->
+          <p>More to come soon...</p>
+        </div>
+        <!-- End container section  -->
+        <img id="research-image" src="assets/IMG_0861.JPG" />
+    </div>
+
+    </div>
+    <div id="teaching" class="tabcontent active">
+      <div class="content">
+        <div class="grid-container">
+          <div class="grid-header">
+            <hr class="solid line horizontal" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
+            <!-- <h2>Teaching:</h2> -->
+          </div>
+          <!-- In line style is placeholder -->
+          <!-- Begin Teaching section -->
+          <!-- <div id="teaching-section" style="padding: 0;"> -->
+            <!-- Begin image section -->
+          
+          <div class="grid-left" style="">
+            <!-- <h2>Teaching: -</h2> -->
+            <div class="card">
+              <img src="assets/IMG_0664.JPG" alt="Coffee table, with scattered paper and empty glasses" />
+            </div>
+          </div>
+          <!-- End image section -->
+          <!-- Begin text section -->
+          <div class="grid-right" style="">
+            <h2 class="text-clr-1">Teaching:</h2>
+            <p>
+              This is a list of courses I have previously taught as well as sample syllabi from those courses.  
+              For student evaluations please e-mail me.
+            </p>
+            <!-- <p>
+              This is a list of courses I have previously taught as well as sample syllabi from those courses. 
+              The list includes courses for which I served as teaching assistant as well as primary instructor. 
+              For student evaluations please e-mail me.
+            </p> -->
+            <h4>Syllabi:</h4>
             <ul>
-              <li>PHI3681-Ethics, Data, and Technology, Fall 2024 (TA) </li>
-              <li>PHI2100-Logic, Summer 2024 (Primary Instructor) </li>
-              <li>PHI3130-Symbolic Logic, Spring 2024 (TA) </li>
-              <li>IDS2935-AI, Philosophy, and Society, Fall 2023 (TA) </li>
-              <li>PHI2100-Logic, Summer 2023 (Primary Instructor) </li>
-              <li>PHI2010-Introduction to Philosophy, Spring 2023 (TA) </li>
-              <li>PHI2630-Contemporary Moral Issues, Fall 2022 (TA)</li>
+              <li>
+                <a href="content/PHI2100 Syllabus.docx">PHI2100 Syllabus</a>
+              </li>
             </ul>
-          </ul>
+          
+            <!-- </div> -->
+            <!-- End text section -->
+          </div>
+          <!-- Begin courses section -->
+
+          
+          <!-- <div class="grid-left-left">
+            <h2><strong>University of Florida:</strong></h2>
+          </div>
+          <div class="grid-right-right">
+            <ul>
+                <li>PHI3681-Ethics, Data, and Technology, Fall 2024 (TA) </li>
+                <li>PHI2100-Logic, Summer 2024 (Primary Instructor) </li>
+                <li>PHI3130-Symbolic Logic, Spring 2024 (TA) </li>
+                <li>IDS2935-AI, Philosophy, and Society, Fall 2023 (TA) </li>
+                <li>PHI2100-Logic, Summer 2023 (Primary Instructor) </li>
+                <li>PHI2010-Introduction to Philosophy, Spring 2023 (TA) </li>
+                <li>PHI2630-Contemporary Moral Issues, Fall 2022 (TA)</li>
+              </ul>
+          </div> -->
+
+          <div class="grid-footer" id="course-section">
+            <!-- <h3>Courses:</h3> -->
+            <hr class="solid line horizontal" style="width: 100%; margin-bottom: .8rem; margin-top: .8rem;">
+            <h2>Courses:</h2>
+            <p>
+              This list includes courses for which I served as teaching assistant or primary instructor.</br>
+            </p>
+            <ul>
+              <li style="list-style: none;">
+                <!-- <h3> -->
+                  <strong>University of Florida:</strong>
+                <!-- </h3> -->
+                <ul>
+                  <li>PHI3681-Ethics, Data, and Technology, Fall 2024 (TA) </li>
+                  <li>PHI2100-Logic, Summer 2024 (Primary Instructor) </li>
+                  <li>PHI3130-Symbolic Logic, Spring 2024 (TA) </li>
+                  <li>IDS2935-AI, Philosophy, and Society, Fall 2023 (TA) </li>
+                  <li>PHI2100-Logic, Summer 2023 (Primary Instructor) </li>
+                  <li>PHI2010-Introduction to Philosophy, Spring 2023 (TA) </li>
+                  <li>PHI2630-Contemporary Moral Issues, Fall 2022 (TA)</li>
+                </ul>
+              </li>
+            </ul>
+            <!-- <p> -->
+              <i>For student evaluations please e-mail me.</i>
+            <!-- </p> -->
+          </div>
+          <!-- End courses section -->
         </div>
       </div>
       <!-- End Teaching section -->
