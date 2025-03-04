@@ -4,6 +4,7 @@
     --background-cream: #fbf6ef;
     --background-cream-dark: #EDE8DC;
     --background-grey: #F1F1F1;
+    --background-white: #FFFFFF;
     
     --accent-ashgray: #CFD7C7;
     --accent-black: #0b132b;
@@ -29,7 +30,7 @@ body {
     height: 100vh;
     /* overflow: hidden; */
     margin: 0rem;
-    background-color: var(--background-cream-dark);
+    background-color: var(--background-grey);
     /* background-color: var(--background-cream); */
     color: var(--primary-midnight);
     font-family: 'Wittgenstein', serif;
@@ -77,6 +78,29 @@ li {
     /* list-style: "φ " inside; */
     /* list-style: lower-greek inside; */
     margin-top: .5rem;
+}
+
+/* h3::after {
+  width: 100%; margin-bottom: .8rem; margin-top: .8rem;
+} */
+
+.divider h3 {
+  display: flex;
+  padding: 0;
+}
+
+.divider-full h3::before, h3::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #000;
+  margin: auto;
+}
+
+.divider-right h3::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #000;
+  margin: auto;
 }
 
 /* Style the tab */
@@ -147,7 +171,7 @@ li {
 }
 
 .container div, p, h3, ul, h4 {
-  padding: 1rem;
+  padding: .4rem;
   margin: 0;
 }
 
@@ -241,7 +265,7 @@ hr.rounded {
 
 #research .container {
   z-index: 1;
-  background-color: var(--background-cream-dark);
+  background-color: var(--background-grey);
   border-radius: 0 0 .5rem .5rem;
 }
 
