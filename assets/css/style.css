@@ -30,7 +30,7 @@ body {
     height: 100vh;
     /* overflow: hidden; */
     margin: 0rem;
-    background-color: var(--background-grey);
+    background-color: var(--background-white);
     /* background-color: var(--background-cream); */
     color: var(--primary-midnight);
     font-family: 'Wittgenstein', serif;
