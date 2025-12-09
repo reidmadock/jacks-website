@@ -10,8 +10,10 @@
     --highlight-dark-grey: #55555560;
     
     --accent-ashgray: #CFD7C7;
-    --accent-black: #0b132b;
+    --accent-black: #050914;
     --accent-dark-gray: #ccc;
+    --accent-dark-blue: #0b132b;
+
 
     --background-midnight:  #26236B;
     --background-midnight2: #1C1D54;
@@ -109,7 +111,7 @@ li {
 .tab {
   overflow: hidden;
   /* border: 1px solid var(--accent-black); */
-  background-color: var(--background-white);
+  background-color: var(--accent-black);
   /* width: 100%;
   position: fixed;
   top: 0px; */
@@ -126,8 +128,8 @@ li {
   padding: 10px 12px;
   /* transition: 0.4s; */
   font-size: 1.1rem;
-  color: var(--primary-midnight);
-  text-decoration: underline 0.1rem rgba(0, 0, 0, 0);
+  /* color: var(--primary-midnight); */
+  text-decoration: underline 0.1rem rgba(255, 255, 255, 0);
   transition: text-decoration-color 300ms;
 }
 
@@ -135,7 +137,7 @@ li {
 .tab button:hover {
   /* background-color: var(--highlight-dark-grey); */
   /* text-decoration: underline; */
-  text-decoration: underline 0.1rem rgba(0, 0, 0, 1);
+  text-decoration: underline 0.1rem rgba(255, 255, 255, 1);
   /* transition: 200ms; */
   cursor: pointer;
 }
@@ -149,7 +151,7 @@ li {
 .tab button.active {
   /* background-color: var(--background-dark-grey); */
   /* text-decoration: underline .1rem; */
-  text-decoration: underline 0.1rem rgba(0, 0, 0, 1);
+  text-decoration: underline 0.1rem rgba(255, 255, 255, 1);
   /* transition: 200ms; */
 
 }
