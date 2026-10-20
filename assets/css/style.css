@@ -333,7 +333,7 @@ hr.rounded {
 @media (width <= 1240px) {
   .tab button {
     /* display: flex; */
-    background-color: inherit;
+    /* background-color: inherit; */
     float: right;
     border: none;
     outline: none;
@@ -341,7 +341,7 @@ hr.rounded {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 24px;
-    color: var(--background-cream);
+    /* color: var(--background-cream); */
   }
   .grid-container {
     width: 92%;
