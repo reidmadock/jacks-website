@@ -1,5 +1,7 @@
 // Probably need to adjust this function, but not sure
 // W3 provided the base code and I assume they know what they're doing
+viewHistory = [];
+
 function openPage(evt, pageName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -13,4 +15,20 @@ function openPage(evt, pageName) {
   }
   document.getElementById(pageName).style.display = "block";
   evt.currentTarget.className += " active";
+
+  viewHistory.push(pageName);
+  history.pushState({page : 1}, "","?page=1");
+  console.log(viewHistory);
 }
+
+// window.addEventListener('popstate', (event) => {
+//             console.log("The user navigated back or forward!");
+//             // Custom logic goes here (e.g., closing a modal or updating UI)
+//             navigateBack(event);
+//           });
+
+// function navigateBack(event) {
+//     if (viewHistory.length > 1) {
+//       openPage(event,viewHistory.pop());
+//     }
+// }
