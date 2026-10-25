@@ -1,34 +1,43 @@
-// Probably need to adjust this function, but not sure
-// W3 provided the base code and I assume they know what they're doing
-viewHistory = [];
+// Tabs are shown/hidden on one page. Each tab gets its own address
+// (e.g. jackmadock.com/#research) so the browser's back and forward
+// buttons move between tabs instead of leaving the site.
+var homePage = "Jack Madock";
 
-function openPage(evt, pageName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-        // tabcontent[i].className.replace(" active","not-active");
+// Work out which tab the current address points to
+function pageFromUrl() {
+  var pageName = decodeURIComponent(window.location.hash.slice(1));
+  if (pageName && document.getElementById(pageName)) {
+    return pageName;
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(pageName).style.display = "block";
-  evt.currentTarget.className += " active";
-
-  viewHistory.push(pageName);
-  history.pushState({page : 1}, "","?page=1");
-  console.log(viewHistory);
+  return homePage;
 }
 
-// window.addEventListener('popstate', (event) => {
-//             console.log("The user navigated back or forward!");
-//             // Custom logic goes here (e.g., closing a modal or updating UI)
-//             navigateBack(event);
-//           });
+// Show one tab and underline its button; hide the rest
+function showPage(pageName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tabcontent.length; i++) {
+    var isCurrent = tabcontent[i].id === pageName;
+    tabcontent[i].style.display = isCurrent ? "block" : "none";
+    tablinks[i].classList.toggle("active", isCurrent);
+  }
+}
 
-// function navigateBack(event) {
-//     if (viewHistory.length > 1) {
-//       openPage(event,viewHistory.pop());
-//     }
-// }
+// Called by the tab buttons
+function openPage(evt, pageName) {
+  if (pageName === pageFromUrl()) {
+    return;
+  }
+  showPage(pageName);
+  var url = pageName === homePage ? window.location.pathname : "#" + pageName;
+  history.pushState(null, "", url);
+}
+
+// Back/forward buttons: show whichever tab the address now points to
+window.addEventListener("popstate", function () {
+  showPage(pageFromUrl());
+});
+
+// On first load, open the tab named in the address (if any)
+showPage(pageFromUrl());
