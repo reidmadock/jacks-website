@@ -231,7 +231,7 @@ li {
 }
 
 .grid-header {
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 /* Class settings */
@@ -316,7 +316,7 @@ hr.rounded {
 /* Media queries */
 @media only screen and (max-width: 1920px), (min-device-width: 768px) and (max-device-width: 1024px) {
   .container {
-    width: 68%;
+    width: 96%;
     display: grid;
     grid-template-columns: auto;
     gap: 5px;
@@ -336,30 +336,41 @@ hr.rounded {
 }
 
 @media (width <= 1240px) {
+  .homepage-left {
+
+  }
+  
   .tab button {
-    /* display: flex; */
+    display: block;
     /* background-color: inherit; */
     float: right;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    /* padding: 14px 16px; */
     transition: 0.3s;
-    font-size: 24px;
+    /* font-size: 24px; */
     /* color: var(--background-cream); */
   }
   .grid-container {
-    width: 92%;
-    display: grid;
+    width: 96%;
+    display: block;
+    /* display: grid; */
     grid-template-areas:
       "grid-header"
       "grid-left"
       "grid-right"
       "grid-footer";
-    gap: 1rem;
+    /* gap: 1rem; */
   }
 
   .container {
-    width: 92%;
+    /* width: 92%; */
+  }
+  
+  .card img {
+    border-radius: 5px 5px 0 0;
+    max-height: 20rem;
+    /* width: 140%; */
   }
 }
